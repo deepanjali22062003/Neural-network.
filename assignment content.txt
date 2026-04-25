@@ -1,0 +1,146 @@
+Ques 1:What are epoch, batch size, and Stratified? Please explain them. ans 🔹 Epoch An epoch means one complete pass of the entire training dataset through the model.
+
+Example: If you have 1000 samples and the model sees all 1000 once → 1 epoch
+
+If epochs = 10 → model sees data 10 times
+
+🔹 Batch Size Batch size = number of samples processed before updating model weights.
+
+Example:
+
+Dataset = 1000 samples
+
+Batch size = 100 → 10 batches per epoch
+
+Types:
+
+Batch Gradient Descent → whole dataset at once
+
+Mini-batch Gradient Descent → small chunks (most common)
+
+Stochastic Gradient Descent (SGD) → 1 sample at a time
+
+🔹 Stratified (Stratified Sampling) Used when splitting data (train/test)
+
+Ensures same class distribution in both sets
+
+Example:
+
+Dataset: 80% class A, 20% class B
+
+Stratified split keeps this ratio in train & test
+
+Ques 2:Explain the different types for activation functions? ans Activation functions decide whether a neuron should activate or not
+
+🔹 1. Sigmoid Output: 0 to 1
+
+Formula:
+
+σ(x) = 1 / (1 + e^-x) Used in binary classification
+
+Problem: Vanishing gradient
+
+🔹 2. Tanh Output: -1 to 1
+
+Zero-centered (better than sigmoid)
+
+🔹 3. ReLU (Most Important) Formula:
+
+f(x) = max(0, x) Fast and widely used
+
+Problem: Dead neurons
+
+🔹 4. Leaky ReLU Fixes ReLU problem
+
+Allows small negative values
+
+🔹 5. Softmax Used in multi-class classification
+
+Converts output into probabilities
+
+🔹 6. ELU / SELU Advanced versions of ReLU
+
+Better learning in deep networks
+
+Ques 3:How do we handle structured and unstructured data in ANNs and CNNs? ans Structured Data Organized (tables, rows, columns)
+
+Example: Excel, CSV
+
+Used with:
+
+ANN (Artificial Neural Network)
+
+Steps:
+
+Normalize data
+
+Feature selection
+
+Feed into fully connected layers
+
+🔹 Unstructured Data Images, audio, text
+
+Used with:
+
+CNN (Convolutional Neural Network)
+
+Steps:
+
+Images → pixels
+
+CNN extracts features automatically
+
+Ques 4:What is a layer? Define ANN and CNN layers? ans Activation functions are mathematical functions used in neural networks to introduce non-linearity, allowing the model to learn complex patterns.
+
+🔹 Types of Activation Functions
+
+Sigmoid Function Formula: σ(x) = 1 / (1 + e⁻ˣ)
+Range: 0 to 1
+
+Used in binary classification
+
+Limitation: Vanishing gradient problem
+
+Tanh Function Range: -1 to 1
+Zero-centered, better than sigmoid
+
+Limitation: Still suffers from vanishing gradient
+
+ReLU (Rectified Linear Unit) Formula: f(x) = max(0, x)
+Range: 0 to ∞
+
+Most widely used in hidden layers
+
+Limitation: Dead neuron problem
+
+Leaky ReLU Allows small negative values
+Solves dead neuron issue of ReLU
+
+Softmax Function Converts outputs into probabilities
+Used in multi-class classification
+
+Ques 5:What concepts are used in ANN and CNN? ans Data in machine learning can be broadly classified into structured and unstructured data, and they are handled using different neural network architectures.
+
+🔹 1. Structured Data in ANN Structured data is organized in rows and columns (like tables, CSV files, databases).
+
+Examples: Student records, bank data, sales data
+
+It is handled using Artificial Neural Networks (ANNs):
+
+Data is first preprocessed (cleaning, normalization)
+
+Features are selected and given as input
+
+ANN uses fully connected layers to learn patterns
+
+🔹 2. Unstructured Data in CNN Unstructured data includes images, audio, videos, and text
+
+Examples: Images, speech, documents
+
+It is handled using Convolutional Neural Networks (CNNs):
+
+Data is converted into numerical form (e.g., pixels for images)
+
+CNN automatically performs feature extraction
+
+Uses layers like convolution, pooling, and fully connected layers
